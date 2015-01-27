@@ -1,7 +1,3 @@
-.row {
-	text-align: center;
-}
-
 .carousel {
 	width: 1200px;
 	overflow: hidden;
@@ -40,22 +36,43 @@
 	margin: 0px 20px 20px;
 	font-weight: 200;
 }
-.controls {
-	position: absolute;
-	top: 500px;
-	left: 50%;
-	width: 150px;
-	margin-left: -75px;
-}
+#slider.ui-slider-horizontal:before{
 
-.controls a {
-	display: block;
 }
-
-.controls .previous {
+.slider-outer{
+	width: 100%;
+}
+.slider-outer-left{
+	width: 5%;
+	height: 12px;
+	float: left;
+	background: url(../img/blackline.jpg) repeat-x;
+}
+.slider-outer #slider{
+	width: 90%;
+	margin: 0;
 	float: left;
 }
-
-.controls .next {
-	float: right;
+.slider-outer-right{
+	width: 5%;
+	height: 12px;
+	float: left;
+	background: url(../img/blackline.jpg) repeat-x;
+}
+#slider.ui-slider-horizontal{
+	border: none;
+	background: url(../img/blackline.jpg) repeat-x;
+}
+span.ui-slider-handle.ui-state-default.ui-corner-all{
+	background: #238D4A;
+	width: 10%;
+	height: 30px;
+	margin-top: -5px;
+	margin-left: -5%;
+}
+span.ui-slider-handle.ui-state-default.ui-corner-all:after{
+	content: attr(data-after);
+	color: white;
+	text-align: center;
+	padding: 3px 20px
 }

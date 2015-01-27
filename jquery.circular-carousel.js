@@ -179,13 +179,10 @@ Thanks: Addy Osmani, Marcus Haslam
       // NOTE: heights recorded before the css transition took place.
 
       // Sort the items by offset().top values
-      console.table(itemHeights);
       var sortedItems = itemHeights.sort(function(a, b) {
         return a.top - b.top;
       });
-      console.table(sortedItems);
-      console.log(oldActiveItem);
-
+     
       // Loop through and set z-indexes by top-to-bottom offset().top's.
       var i = 0;
       while (i < sortedItems.length) {
@@ -293,7 +290,7 @@ Thanks: Addy Osmani, Marcus Haslam
       */
 
       cycleActiveTo: function (index) {
-
+        console.log("cycle"+index);
         // Remove old active classes.
         var activeElement = $items.eq(activeItem);
         activeElement.removeClass('active');

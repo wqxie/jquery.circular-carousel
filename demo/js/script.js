@@ -4,6 +4,7 @@
 		$( "#slider" ).slider({
 		  max: 8
 		});
+		$("#slider .ui-slider-handle").attr("data-after","1/9");
 		var options = {
 			ovalWidth: 400,
 			ovalHeight: 0,
@@ -43,21 +44,21 @@
 
 		/* Manaully click an item anywhere in the carousel */
 		$('.carousel .item').click(function(e) {
-			var index = $(this).index('li');
+			var index = $(this).data('index');
+
 			carousel.cycleActiveTo(index);
 			$( "#slider" ).slider( "value", index );
-			console.log(index);
 			e.preventDefault();
-		});
-		
-		$("input#num").on("change",function(){
-			var index = parseInt($(this).val());
-			carousel.cycleActiveTo(index);
 		});
 
 		$( "#slider" ).on( "slidechange", function( event, ui ) {
 			var index=$( "#slider" ).slider( "value" );
-			carousel.cycleActiveTo(index);
+			$("#slider .ui-slider-handle").attr("data-after",(index+1)+"/9");
+			 if (event.originalEvent) {
+            	carousel.cycleActiveTo(index);
+        	}
+        	
+			
 		} );
 	});
 
