@@ -179,9 +179,12 @@ Thanks: Addy Osmani, Marcus Haslam
       // NOTE: heights recorded before the css transition took place.
 
       // Sort the items by offset().top values
+      console.table(itemHeights);
       var sortedItems = itemHeights.sort(function(a, b) {
         return a.top - b.top;
       });
+      console.table(sortedItems);
+      console.log(oldActiveItem);
 
       // Loop through and set z-indexes by top-to-bottom offset().top's.
       var i = 0;
@@ -224,7 +227,6 @@ Thanks: Addy Osmani, Marcus Haslam
         Credit @marcusehaslam for help here!
      */
     function findBestRoute (array, start, end){
-
       var left = 0, right = 0;
 
       var index = start;

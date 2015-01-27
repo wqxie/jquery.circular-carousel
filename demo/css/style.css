@@ -3,25 +3,43 @@
 }
 
 .carousel {
-	left: 50%;
-	position: absolute;
-	width: 1000px;
-	margin-left: -500px;
+	width: 1200px;
 	overflow: hidden;
-	height: 500px;
-	top: 50px;
+	height: 700px;
 }
 
 .carousel .item {
-	width: 350px;
-	height: 250px;
-	background: url('http://placehold.it/350x250') top left no-repeat;
-	background-size: 100%;
+	width: 320px;
+	height: 500px;
 	vertical-align: middle;
 	line-height: 150px;
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	background-color: #138d44;
+	color: white;
+	line-height: 20px;
+	text-align: left;
+	font-family: Roboto, Arial, sans-serif;
 }
-
+.carousel .item img{
+	width: 100%;
+	height: 220px;
+}
+.carousel .item .test-text{
+	font-size: 20px;
+	margin: 40px 20px 20px;
+	line-height: 25px;
+	font-weight: 500;
+}
+.carousel .item .test-name{
+	font-size: 14px;
+	margin: 0px 20px 5px;
+	font-weight: 500;
+}
+.carousel .item .test-shop{
+	font-size: 14px;
+	margin: 0px 20px 20px;
+	font-weight: 200;
+}
 .controls {
 	position: absolute;
 	top: 500px;
