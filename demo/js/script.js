@@ -6,10 +6,10 @@
 		});
 		$("#slider .ui-slider-handle").attr("data-after","1/9");
 		var options = {
-			ovalWidth: 400,
+			ovalWidth: 300,
 			ovalHeight: 0,
-			offsetX: 100,
-			offsetY: 360,
+			offsetX: 0,
+			offsetY: 300,
 			angle: 0,
 			activeItem: 0,
 			duration: 350,
@@ -45,7 +45,6 @@
 		/* Manaully click an item anywhere in the carousel */
 		$('.carousel .item').click(function(e) {
 			var index = $(this).data('index');
-
 			carousel.cycleActiveTo(index);
 			$( "#slider" ).slider( "value", index );
 			e.preventDefault();
@@ -57,9 +56,18 @@
 			 if (event.originalEvent) {
             	carousel.cycleActiveTo(index);
         	}
-        	
-			
-		} );
+        });
+
+        $(".slider-outer-left").on("click",function(){
+        	var index = 0;
+			carousel.cycleActiveTo(index);
+			$( "#slider" ).slider( "value", index );
+        });
+        $(".slider-outer-right").on("click",function(){
+        	var index = 8;
+			carousel.cycleActiveTo(index);
+			$( "#slider" ).slider( "value", index );
+        });
 	});
 
 })();

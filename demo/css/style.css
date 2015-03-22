@@ -1,11 +1,11 @@
 .carousel {
-	width: 1200px;
+	width: 960px;
 	overflow: hidden;
 	height: 700px;
 }
 
 .carousel .item {
-	width: 320px;
+	width: 300px;
 	height: 500px;
 	vertical-align: middle;
 	line-height: 150px;
@@ -20,13 +20,26 @@
 	width: 100%;
 	height: 220px;
 }
+.carousel .item .test-avatar{
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+.carousel .item .test-avatar img{
+	width: 80%;
+	max-width: 60px;
+	height: auto;
+	margin: 0 auto;
+}
 .carousel .item .test-text{
+	width: 70%;
 	font-size: 20px;
 	margin: 40px 20px 20px;
 	line-height: 25px;
 	font-weight: 500;
 }
 .carousel .item .test-name{
+	width: 70%;
 	font-size: 14px;
 	margin: 0px 20px 5px;
 	font-weight: 500;
@@ -46,7 +59,12 @@
 	width: 5%;
 	height: 12px;
 	float: left;
-	background: url(../img/blackline.jpg) repeat-x;
+}
+.slider-outer-left img,.slider-outer-right img{
+	width: 100%;
+	height: 12px;
+	vertical-align: top;
+	margin-top: -1px;
 }
 .slider-outer #slider{
 	width: 90%;
@@ -57,7 +75,6 @@
 	width: 5%;
 	height: 12px;
 	float: left;
-	background: url(../img/blackline.jpg) repeat-x;
 }
 #slider.ui-slider-horizontal{
 	border: none;
@@ -65,14 +82,15 @@
 }
 span.ui-slider-handle.ui-state-default.ui-corner-all{
 	background: #238D4A;
-	width: 10%;
+	width: 11%;
 	height: 30px;
 	margin-top: -5px;
 	margin-left: -5%;
 }
 span.ui-slider-handle.ui-state-default.ui-corner-all:after{
 	content: attr(data-after);
+	display: block;
 	color: white;
 	text-align: center;
-	padding: 3px 20px
+	line-height: 30px;
 }
